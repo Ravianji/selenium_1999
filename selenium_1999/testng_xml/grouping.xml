@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<groups>
+		<define name="weekly">
+			<include name="unit"></include>
+		</define>
+		<run>
+			<include name="weekly"></include>
+			<include name="unit"></include>
+			<exclude name="sanit"></exclude>
+		</run>
+	</groups>
+  <test thread-count="5" name="Test">
+	  <groups>
+		 <run>
+			 <include name="smoke"></include>
+		 </run>
+	  </groups>
+    <classes>
+      <class name="pack_2.class_2"></class>
+      <class name="pack_2.class3"></class>
+    </classes>
+  </test> <!-- Test -->
+  <test name="test2">
+	  <classes>
+		  <class name="demo.class1"></class>
+		  <class name="demo.facebook"></class>
+	  </classes>
+  </test>
+</suite> <!-- Suite -->
